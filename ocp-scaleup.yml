@@ -1,0 +1,7 @@
+---
+- name: Execute scaleup script
+  hosts: localhost
+  tasks:
+  - name: ocp add node to cluster 
+    shell:
+      ansible-playbook -i /etc/ansible/hosts /usr/share/ansible/openshift-ansible/playbooks/scaleup.yml -vvv
